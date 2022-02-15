@@ -1,5 +1,5 @@
 # BiscuitDeMer
-Un  autre TDD sur un programme daffichage dune sequence de nombre:
+TDD sur un programme daffichage dune sequence de nombre:
 
 
 Ecrivons un progragmme qui retourne les entier de 1 a 100 
