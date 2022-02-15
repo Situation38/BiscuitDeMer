@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31702.278
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BiscuitDeMer", "BiscuitDeMer.csproj", "{DB2A764B-9969-44B8-B911-D86EE0C9F717}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestBiscuitDeMer", "..\TestBiscuitDeMer\TestBiscuitDeMer.csproj", "{CA00F245-BEE7-48AD-843E-AF8AA2940A0E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DB2A764B-9969-44B8-B911-D86EE0C9F717}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB2A764B-9969-44B8-B911-D86EE0C9F717}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB2A764B-9969-44B8-B911-D86EE0C9F717}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB2A764B-9969-44B8-B911-D86EE0C9F717}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CA00F245-BEE7-48AD-843E-AF8AA2940A0E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA00F245-BEE7-48AD-843E-AF8AA2940A0E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA00F245-BEE7-48AD-843E-AF8AA2940A0E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA00F245-BEE7-48AD-843E-AF8AA2940A0E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E148BF1E-47A9-4E68-A4EF-E5A6205FBB45}
+	EndGlobalSection
+EndGlobal
