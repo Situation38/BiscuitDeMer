@@ -1,7 +1,7 @@
 ﻿
 
 
-//Ecrivons un programme qui retourne les entiers de 1 a 100
+//Ecrivons un progragmme^qui retourne les entier de 1 a 100 
 //Qui pour les multiples de 3 remplace le nombre par "Biscuit"
 //Qui pour les multiples de 5 remplace le nombre par "DeMer"
 //Qui pour les multiples de 15  remplace le nombre par "BiscuitDeMer"
@@ -10,10 +10,11 @@
 
 
 //on commence des tests  des fonctionnalites les plus basiques
+//En creant le minimum de code qui va faire passer le test
+//on commence par traiter les cas les plus simples
+//puis en terminant part les cas les plus complexes
 
-
-/*Test et code pas encore termines
- manque le test et le code pour les nombres compris de 1 a 100*/
+            //Test et code Termine
 
 
 
@@ -83,8 +84,9 @@ namespace BiscuitDeMer
                         return "Biscuit";
                     return nombre.ToString();
 
-                }
+                }   
 
+                        //optimisation du code pour cecas
 
                  public string Genere(int nombre)
                     {
@@ -107,6 +109,9 @@ namespace BiscuitDeMer
 
             }
 
+
+            //on optimise le code pour ce cas
+
              public string Genere(int nombre)
             {
                 if (nombre % 3 == 0)
@@ -117,40 +122,45 @@ namespace BiscuitDeMer
 
             }
 
+             
+
              public string Genere(int nombre)
-            {
-                if (nombre == 15 || nombre == 30)
-                    return "BiscuitDeMer";
-                if (nombre % 3 == 0)
-                    return "Biscuit";
-                if (nombre % 5 == 0)
-                    return "DeMer";
-                return nombre.ToString();
+                {
+                    if (nombre == 15 || nombre == 30)
+                        return "BiscuitDeMer";
+                    if (nombre % 3 == 0)
+                        return "Biscuit";
+                    if (nombre % 5 == 0)
+                        return "DeMer";
+                    return nombre.ToString();
 
-            }
+                }
 
-
+       
+                //on optimise le code pour ce cas
         
             public string Genere(int nombre)
-            {
-                if (nombre % 15 == 0)
-                    return "BiscuitDeMer";
-                if (nombre % 3 == 0)
-                    return "Biscuit";
-                if (nombre % 5 == 0)
-                    return "DeMer";
-                return nombre.ToString();
+                {
+                    if (nombre % 15 == 0)
+                        return "BiscuitDeMer";
+                    if (nombre % 3 == 0)
+                        return "Biscuit";
+                    if (nombre % 5 == 0)
+                        return "DeMer";
+                    return nombre.ToString();
 
-            }
+                }
 
         
 
 
-        **On fait des tests et on genere du code 
-        *pour le cas deuxnombres  un min et un max
+        *On fait des tests et on genere du code 
+        * pour le cas deux nombres  pasees en parametre 
+        * un min et un max
         *
         *
         
+                //ici on traitait un seul nombre
 
             public string Genere(int minNombre , int Maxnombre)
             {
@@ -164,23 +174,28 @@ namespace BiscuitDeMer
 
             }
 
-          public string Genere(int minNombre , int Maxnombre)
-        {
-            string affich = "";
-            if (minNombre % 15 == 0)
-                return affich += "BiscuitDeMer";
-            else if (minNombre % 3 == 0)
-                return affich += "Biscuit";
-            else if (minNombre % 5 == 0) 
+               
+          //Les sorties sont concatanees
+
+        public string Genere(int minNombre , int Maxnombre)
+            {
+                string affich = "";
+                if (minNombre % 15 == 0)
+                    return affich += "BiscuitDeMer";
+                else if (minNombre % 3 == 0)
+                    return affich += "Biscuit";
+                else if (minNombre % 5 == 0) 
             
-                affich +=  "DeMer";
-            else
-                affich += minNombre.ToString();
+                    affich +=  "DeMer";
+                else
+                    affich += minNombre.ToString();
              
-        }
+            }
 
 
         
+         //ici on traite le premier et le deuxieme nombre 
+
 
      public string Genere(int minNombre , int maxNombre)
         {
@@ -219,27 +234,70 @@ namespace BiscuitDeMer
 ***********************code Refactoriser**********************
 
              public string Genere(int minNombre , int maxNombre)
+                {
+                    string affich = "";
+                    affich += EvalionsLeNombre(minNombre);
+
+
+
+                    if (minNombre < maxNombre)
+                    {
+
+                        affich += EvalionsLeNombre( maxNombre);
+                     }
+
+                        return affich;
+
+                }
+
+
+
+            public string EvalionsLeNombre (int nombre)
+            {
+                //Methode permettant de cleaner notre code
+                //Elle permet de tester nos conditions pour 
+                chaque nombre
+       
+
+
+                if (nombre % 15 == 0)
+                    return "BiscuitDeMer";
+                if  (nombre % 3 == 0)
+                    return "Biscuit";
+                 if (nombre % 5 == 0)
+                    return "DeMer";
+
+            
+                   return nombre.ToString();
+
+            }
+        
+
+
+        ****************code Refactoriser*******************
+        *
+        *public string Genere(int minNombre , int maxNombre)
         {
             string affich = "";
-            affich += EvalionsLeNombre(minNombre);
+           
 
 
 
-            if (minNombre < maxNombre)
+            while (minNombre <= maxNombre)
             {
 
-                affich += EvalionsLeNombre( maxNombre);
-             }
+                affich += EvalionsLeNombre(minNombre++);
+            }
 
                 return affich;
 
         }
 
-
-
         public string EvalionsLeNombre (int nombre)
         {
-
+            //Nous permet juste de refactoriser
+            //notre code afin quil soit moins touffu 
+            //et plus clean
 
 
             if (nombre % 15 == 0)
@@ -256,7 +314,6 @@ namespace BiscuitDeMer
         
 
 
-        ****************************************************************
 
          */
 
@@ -267,15 +324,15 @@ namespace BiscuitDeMer
         public string Genere(int minNombre , int maxNombre)
         {
             string affich = "";
-            affich += EvalionsLeNombre(minNombre);
+           
 
 
 
-            if (minNombre < maxNombre)
+            while (minNombre <= maxNombre)
             {
 
-                affich += EvalionsLeNombre( maxNombre);
-             }
+                affich += EvalionsLeNombre(minNombre++);
+            }
 
                 return affich;
 
@@ -305,7 +362,7 @@ namespace BiscuitDeMer
 
 
 
-        //Test et generation du code pas encore termine
+        //  Okey termine
 
 
 
